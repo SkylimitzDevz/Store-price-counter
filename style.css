@@ -1,0 +1,161 @@
+body{
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    background: #151515;
+    color:white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cal-container{
+    margin: 0 auto;
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    padding-bottom: 50px;
+    background: #3E1E68;
+    border-radius: 30px;
+}
+
+.display{
+    text-align: center;
+    width:90%;
+    margin:20px;
+    background: #262048;
+    padding:0px;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 50px;
+    height: 300px;
+    margin-bottom: 120px;
+    overflow: hidden;
+}
+
+#amount{
+    font-size:175px;
+    color: #52FF86;
+    text-align: center;
+    margin:0;
+}
+
+#current-val{
+    font-size: 45px;
+    margin-top: -10px;
+}
+
+.keypad{
+    margin: auto;
+    display: grid;
+    grid-template-columns:128px 128px 128px 158px;
+    grid-template-rows: 128px 128px 128px;
+    gap:10px;
+    margin-top: -90px;
+    margin-left: 50px;
+    grid-template-areas:
+    "btn1 btn2 btn3 btn10"
+    "btn4 btn5 btn6 btn10"
+    "btn7 btn8 btn9 btn11"
+}
+
+.key{
+    border-radius:50%;
+    border:2px solid #e45a9100;
+    color:rgba(255, 255, 255, 0.628);
+    background:#5D2F77;
+    font-size: 50px;
+    transition: background 0.2s ease-out, border 0.5s ease;
+    cursor: pointer;
+}
+
+.key:active{
+    background: #783d9a;
+}
+
+.key:hover{
+    border: 2px solid #E45A92;
+}
+
+
+#clear-btn{
+    border-radius: 20px;
+    margin-left:20px;
+}
+
+
+
+#btn-1 { grid-area: btn1; }
+#btn-2 { grid-area: btn2; }
+#btn-3 { grid-area: btn3; }
+#btn-4 { grid-area: btn4; }
+#btn-5 { grid-area: btn5; }
+#btn-6 { grid-area: btn6; }
+#btn-7 { grid-area: btn7; }
+#btn-8 { grid-area: btn8; }
+#btn-9 { grid-area: btn9; }
+#add { grid-area: btn10; }
+#clear-btn { grid-area: btn11; }
+
+#add{
+    color:white;
+    background:#E45A92;
+    border-radius: 20px;
+    margin-left:20px;
+    transition: background 0.2s ease-out;
+    border:2px solid #ffffff00;
+    transition: border 0.5s ease;
+}
+
+#add:active{
+    background: #a43662;
+}
+
+#add:hover{
+    border: 2px solid #f6a2c3;
+}
+
+#nameCard{
+    font-family: "poppins";
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:5px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.follow-btn{
+    font-family: "poppins";
+    color: white;
+    background: none;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.369);
+    font-size: 17px;
+    font-weight: bolder;
+    transition: background 0.5s ease-out, border 0.5s ease, color 0.5s ease;
+    cursor: pointer
+}
+
+#nameCard a{
+    color:white;
+    text-decoration: none;
+}
+
+.follow-btn:hover{
+    background: white;
+    color: black;
+}
+
+.follow-btn svg{
+    margin-bottom: -2px;
+    margin-left: 5px;
+    fill:#ffff;
+    transition: fill 0.5s ease;
+}
+
+.follow-btn:hover svg{
+    fill: #151515;
+}
+
