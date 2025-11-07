@@ -46,14 +46,14 @@ body{
 .keypad{
     margin: auto;
     display: grid;
-    grid-template-columns:128px 128px 128px 158px;
-    grid-template-rows: 128px 128px 128px;
+    grid-template-columns:128px 128px 128px 0.8fr;
+    grid-template-rows: 128px 128px 128px 128px;
     gap:10px;
     margin-top: -90px;
     margin-left: 50px;
     grid-template-areas:
     "btn1 btn2 btn3 btn10"
-    "btn4 btn5 btn6 btn10"
+    "btn4 btn5 btn6 btn12"
     "btn7 btn8 btn9 btn11"
 }
 
@@ -94,8 +94,47 @@ body{
 #btn-9 { grid-area: btn9; }
 #add { grid-area: btn10; }
 #clear-btn { grid-area: btn11; }
+#equal {grid-area: btn12}
+
+#multiply{
+    color:white;
+    background:#E45A92;
+    border-radius: 50%;
+    transition: background 0.2s ease-out;
+    border:2px solid #ffffff00;
+    transition: border 0.5s ease;
+}
+
+#subtract{
+    color:white;
+    background:#E45A92;
+    border-radius: 50%;
+    transition: background 0.2s ease-out;
+    border:2px solid #ffffff00;
+    transition: border 0.5s ease;
+}
+
+#divide{
+    color:white;
+    background:#E45A92;
+    border-radius: 20px;
+    margin-left:20px;
+    transition: background 0.2s ease-out;
+    border:2px solid #ffffff00;
+    transition: border 0.5s ease;
+}
 
 #add{
+    color:white;
+    background:#E45A92;
+    border-radius: 20px;
+    margin-left:20px;
+    transition: background 0.2s ease-out;
+    border:2px solid #ffffff00;
+    transition: border 0.5s ease;
+}
+
+#equal{
     color:white;
     background:#E45A92;
     border-radius: 20px;
