@@ -70,3 +70,4 @@ function calculateVal() {
     price.innerText = "$" + total
 }
 
+
