@@ -27,6 +27,7 @@ function clearVal() {
 // -----gets clicked number-----
 
 function getNum(btnValue) {
+
     if (operator === "") {
         num1 += btnValue.innerText
         console.log("num1: " + num1)
@@ -36,7 +37,7 @@ function getNum(btnValue) {
         console.log("numRecord: " + numRecord)
     }
 
-    else {
+    else{
         num2 += btnValue.innerText
         console.log("num2: " + num2)
 
@@ -49,7 +50,6 @@ function calculateVal() {
     Number(num1)
     Number(num2)
     
-
     if (operator === "+") {
         total = Number(num1) + Number(num2)
     }
@@ -67,6 +67,11 @@ function calculateVal() {
     }
 
     console.log("total: " + total)
-    price.innerText = "$" + total
-}
+    price.innerText = total
 
+    num1 = total
+    num2 = ""
+    operator = ""
+
+    currentNum.innerText = ""
+}

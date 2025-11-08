@@ -1,9 +1,30 @@
+
+
+:root {
+  --bg-dark: #151515;
+  --container-bg: #373737;
+  --display-bg: #234a3c;
+  --key-bg: #676767;
+  --key-bg-active: #aeaeae;
+  --operator-key-bg: #ff823e;
+  --operator-key-bg-active: #e16e3d;
+  --operator-key-border-hover: #ffc69b;
+
+  --text-light: white;
+  --text-dark: black;
+  --text-light-transparent: rgba(255, 255, 255, 0.628);
+  --amount-color: #36ff5e;
+
+  --border-accent: #898989;
+  --border-follow-btn: rgba(255, 255, 255, 0.369);
+}
+
 body{
     flex-direction: column;
     height: 100vh;
     align-items: center;
-    background: #151515;
-    color:white;
+    background: var(--bg-dark);
+    color: var(--text-light);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -13,15 +34,17 @@ body{
     height: auto;
     padding: 10px;
     padding-bottom: 50px;
-    background: #3E1E68;
+    background: var(--container-bg);
     border-radius: 30px;
+    transform: scale(0.8);
+    margin-top: -50px;
 }
 
 .display{
     text-align: center;
     width:90%;
     margin:20px;
-    background: #262048;
+    background: var(--display-bg);
     padding:0px;
     border-radius: 30px;
     margin: auto;
@@ -33,14 +56,19 @@ body{
 
 #amount{
     font-size:175px;
-    color: #52FF86;
+    color: var(--amount-color);
     text-align: center;
     margin:0;
+    font-family: "digital-7";
+    margin-top:50px;
 }
 
 #current-val{
     font-size: 45px;
     margin-top: -10px;
+    font-family: "digital-7";
+    position:relative;
+    top: 20px;
 }
 
 .keypad{
@@ -59,20 +87,20 @@ body{
 
 .key{
     border-radius:50%;
-    border:2px solid #e45a9100;
-    color:rgba(255, 255, 255, 0.628);
-    background:#5D2F77;
+    border: 4px solid transparent;
+    color: var(--text-light-transparent);
+    background: var(--key-bg);
     font-size: 50px;
-    transition: background 0.2s ease-out, border 0.5s ease;
+    transition: background 0.2s ease-out, border 0.2s ease;
     cursor: pointer;
 }
 
 .key:active{
-    background: #783d9a;
+    background: var(--key-bg-active);
 }
 
 .key:hover{
-    border: 2px solid #E45A92;
+    border: 4px solid var(--border-accent);
 }
 
 
@@ -97,59 +125,37 @@ body{
 #equal {grid-area: btn12}
 
 #multiply{
-    color:white;
-    background:#E45A92;
+    color: var(--text-light);
     border-radius: 50%;
-    transition: background 0.2s ease-out;
-    border:2px solid #ffffff00;
     transition: border 0.5s ease;
 }
 
 #subtract{
-    color:white;
-    background:#E45A92;
+    color: var(--text-light);
     border-radius: 50%;
-    transition: background 0.2s ease-out;
-    border:2px solid #ffffff00;
     transition: border 0.5s ease;
 }
 
 #divide{
-    color:white;
-    background:#E45A92;
+    color: var(--text-light);
     border-radius: 20px;
     margin-left:20px;
-    transition: background 0.2s ease-out;
-    border:2px solid #ffffff00;
     transition: border 0.5s ease;
 }
 
 #add{
-    color:white;
-    background:#E45A92;
+    color: var(--text-light);
     border-radius: 20px;
     margin-left:20px;
-    transition: background 0.2s ease-out;
-    border:2px solid #ffffff00;
     transition: border 0.5s ease;
+    
 }
 
 #equal{
-    color:white;
-    background:#E45A92;
+    color: var(--text-light);
     border-radius: 20px;
     margin-left:20px;
-    transition: background 0.2s ease-out;
-    border:2px solid #ffffff00;
     transition: border 0.5s ease;
-}
-
-#add:active{
-    background: #a43662;
-}
-
-#add:hover{
-    border: 2px solid #f6a2c3;
 }
 
 #nameCard{
@@ -160,41 +166,58 @@ body{
     gap:5px;
     justify-content: center;
     text-align: center;
-    margin-top: 20px;
+    margin-top: -90px;
 }
 
 .follow-btn{
     font-family: "poppins";
-    color: white;
+    color: var(--text-light);
     background: none;
     width: 300px;
     height: 50px;
     border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.369);
+    border: 2px solid var(--border-follow-btn);
     font-size: 17px;
     font-weight: bolder;
-    transition: background 0.5s ease-out, border 0.5s ease, color 0.5s ease;
+    transition: background 0.5s ease-out, border 0.5s ease, color 0.5s ease, transform 0.5s ease;
     cursor: pointer
 }
 
 #nameCard a{
-    color:white;
+    color: var(--text-light);
     text-decoration: none;
 }
 
 .follow-btn:hover{
-    background: white;
-    color: black;
+    background: var(--text-light);
+    color: var(--text-dark);
 }
 
 .follow-btn svg{
     margin-bottom: -2px;
     margin-left: 5px;
-    fill:#ffff;
-    transition: fill 0.5s ease;
+    fill: var(--text-light);
+    transition: fill 0.5s ease, transform 0.5s ease;
 }
 
 .follow-btn:hover svg{
-    fill: #151515;
+    fill: var(--bg-dark);
+    transform: rotateZ(360deg);
 }
 
+
+.operator-key {
+    font-size: 35px;
+    cursor: pointer;
+    border: 4px solid #ffc69b00;
+    background: var(--operator-key-bg);
+    transition: background 0.5s ease, border 0.2s ease;
+}
+
+.operator-key:hover{
+    border: 4px solid #ffc69b;
+}
+
+.operator-key:active{
+    background: var(--operator-key-bg-active);
+}
