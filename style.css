@@ -36,6 +36,8 @@ body{
     padding-bottom: 50px;
     background: var(--container-bg);
     border-radius: 30px;
+    transform: scale(0.8);
+    margin-top: -50px;
 }
 
 .display{
@@ -89,7 +91,7 @@ body{
     color: var(--text-light-transparent);
     background: var(--key-bg);
     font-size: 50px;
-    transition: background 0.2s ease-out, border 0.5s ease;
+    transition: background 0.2s ease-out, border 0.2s ease;
     cursor: pointer;
 }
 
@@ -164,7 +166,7 @@ body{
     gap:5px;
     justify-content: center;
     text-align: center;
-    margin-top: 20px;
+    margin-top: -90px;
 }
 
 .follow-btn{
@@ -209,8 +211,7 @@ body{
     cursor: pointer;
     border: 4px solid #ffc69b00;
     background: var(--operator-key-bg);
-    transition: border 0.5s ease;
-    transition: background 0.5s ease;
+    transition: background 0.5s ease, border 0.2s ease;
 }
 
 .operator-key:hover{
